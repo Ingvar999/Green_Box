@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.dp
+"green_box_nucleo\stm32f7xx_hal_msp.o"
+"green_box_nucleo\stm32f7xx_it.o"
+"green_box_nucleo\main.o"
+"green_box_nucleo\main_injection.o"
+"green_box_nucleo\stm32f7xx_hal_tim.o"
+"green_box_nucleo\stm32f7xx_hal_dma_ex.o"
+"green_box_nucleo\stm32f7xx_hal_flash_ex.o"
+"green_box_nucleo\stm32f7xx_hal_pwr.o"
+"green_box_nucleo\stm32f7xx_hal_rcc.o"
+"green_box_nucleo\stm32f7xx_hal_uart.o"
+"green_box_nucleo\stm32f7xx_hal_i2c.o"
+"green_box_nucleo\stm32f7xx_hal_dma.o"
+"green_box_nucleo\stm32f7xx_hal_i2c_ex.o"
+"green_box_nucleo\stm32f7xx_hal.o"
+"green_box_nucleo\stm32f7xx_hal_cortex.o"
+"green_box_nucleo\stm32f7xx_hal_flash.o"
+"green_box_nucleo\stm32f7xx_hal_gpio.o"
+"green_box_nucleo\stm32f7xx_hal_pwr_ex.o"
+"green_box_nucleo\stm32f7xx_hal_tim_ex.o"
+"green_box_nucleo\stm32f7xx_hal_rcc_ex.o"
+"green_box_nucleo\startup_stm32f767xx.o"
+"green_box_nucleo\system_stm32f7xx.o"
+--library_type=microlib --strict --scatter "Green_Box_Nucleo\Green_Box_Nucleo.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Green_Box_Nucleo.map" -o Green_Box_Nucleo\Green_Box_Nucleo.axf
