@@ -3,6 +3,8 @@ green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cstdio
 green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cstdlib
 green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cstring
+green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 green_box_nucleo\main_injection.o: main_injection.h
 green_box_nucleo\main_injection.o: ../Inc/main.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
@@ -27,11 +29,14 @@ green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h
+green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
+green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
+green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h

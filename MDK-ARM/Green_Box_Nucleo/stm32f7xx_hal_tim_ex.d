@@ -22,11 +22,14 @@ green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h
+green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
+green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
+green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 green_box_nucleo\stm32f7xx_hal_tim_ex.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h

@@ -19,6 +19,7 @@
 "green_box_nucleo\stm32f7xx_hal_pwr_ex.o"
 "green_box_nucleo\stm32f7xx_hal_tim_ex.o"
 "green_box_nucleo\stm32f7xx_hal_rcc_ex.o"
+"green_box_nucleo\stm32f7xx_hal_eth.o"
 "green_box_nucleo\startup_stm32f767xx.o"
 "green_box_nucleo\system_stm32f7xx.o"
 --library_type=microlib --strict --scatter "Green_Box_Nucleo\Green_Box_Nucleo.sct"

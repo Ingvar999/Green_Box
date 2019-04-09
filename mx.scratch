@@ -29,7 +29,7 @@
     <heapSize>0x200</heapSize>
     <stackSize>0x400</stackSize>
     
-    	<cpuclock>16</cpuclock>
+    	<cpuclock>216</cpuclock>
     	<board>NUCLEO-F767ZI</board>
 			
     <usedDebug>true</usedDebug>
@@ -79,6 +79,9 @@
 		 		<name>STM32F7xx_HAL_Driver</name>
 						<file>
 							<name>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_eth.c</name>
 						</file>
 						<file>
 							<name>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c</name>
