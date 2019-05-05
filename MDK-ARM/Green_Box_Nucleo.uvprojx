@@ -336,7 +336,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;  ../Drivers/STM32F7xx_HAL_Driver/Inc;  ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;  ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;  ../Drivers/CMSIS/Include;  ../MDK-ARM</IncludePath>
+              <IncludePath>../Inc;         ../Drivers/STM32F7xx_HAL_Driver/Inc;         ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;         ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;         ../Drivers/CMSIS/Include;         ../MDK-ARM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -501,9 +501,14 @@
               <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f7xx_hal_eth.c</FileName>
+              <FileName>stm32f7xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_eth.c</FilePath>
+              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -524,6 +529,36 @@
               <FileName>system_stm32f7xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/system_stm32f7xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Dht11</GroupName>
+          <Files>
+            <File>
+              <FileName>dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\dht11.c</FilePath>
+            </File>
+            <File>
+              <FileName>dht11.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\dht11.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Delay</GroupName>
+          <Files>
+            <File>
+              <FileName>dwt_stm32_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\dwt_stm32_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dwt_stm32_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\dwt_stm32_delay.h</FilePath>
             </File>
           </Files>
         </Group>

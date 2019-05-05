@@ -19,9 +19,12 @@
 "green_box_nucleo\stm32f7xx_hal_pwr_ex.o"
 "green_box_nucleo\stm32f7xx_hal_tim_ex.o"
 "green_box_nucleo\stm32f7xx_hal_rcc_ex.o"
-"green_box_nucleo\stm32f7xx_hal_eth.o"
+"green_box_nucleo\stm32f7xx_hal_adc_ex.o"
+"green_box_nucleo\stm32f7xx_hal_adc.o"
 "green_box_nucleo\startup_stm32f767xx.o"
 "green_box_nucleo\system_stm32f7xx.o"
+"green_box_nucleo\dht11.o"
+"green_box_nucleo\dwt_stm32_delay.o"
 --library_type=microlib --strict --scatter "Green_Box_Nucleo\Green_Box_Nucleo.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
