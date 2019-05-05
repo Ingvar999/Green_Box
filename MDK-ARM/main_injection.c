@@ -3,11 +3,12 @@
 #include <cstring>
 
 #include "main_injection.h"
-#include "dht11.h"
-#include "dwt_stm32_delay.h"
+
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim13;
 
 extern UART_HandleTypeDef huart3;
-extern TIM_HandleTypeDef htim4;
 extern ADC_HandleTypeDef hadc1;
 
 const int bufSize = 20;
@@ -17,9 +18,9 @@ static uint8_t ch;
 static int pos = 0;
 
 void HandleHostString(UART_HandleTypeDef *huart, const char *data){
-	int val = atoi(data);
-	TIM4->CCR4 = TIM4->CCR3 = val;
-	HAL_UART_Transmit_IT(huart, txbuf, sprintf((char *)txbuf, "Changed %d\n", val));
+	//int val = atoi(data);
+	//TIM4->CCR4 = TIM4->CCR3 = val;
+	//HAL_UART_Transmit_IT(huart, txbuf, sprintf((char *)txbuf, "Changed %d\n", val));
 }
 
 
@@ -66,17 +67,10 @@ void Init_Peripheral(){
 	//PWM init
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
-	
-	//USART3 init
-	/*gpioInitStruct.Pin = USART3_RX_PIN | USART3_TX_PIN;
-	gpioInitStruct.Pull = GPIO_PULLUP;
-	gpioInitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-	gpioInitStruct.Mode = GPIO_MODE_AF_PP;
-	gpioInitStruct.Alternate = GPIO_AF7_USART3;
-	HAL_GPIO_Init(USART3_GPIO, &gpioInitStruct);*/
+	HAL_TIM_PWM_Start(&htim13, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
 	
 	HAL_UART_Receive_IT(&huart3, &ch, 1);
-	InitDht11(GPIOF, GPIO_PIN_12);
 }
 
 void Loop(){

@@ -563,6 +563,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>HW Layer</GroupName>
+          <Files>
+            <File>
+              <FileName>hw_layer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hw_layer.h</FilePath>
+            </File>
+            <File>
+              <FileName>hw_layer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hw_layer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
