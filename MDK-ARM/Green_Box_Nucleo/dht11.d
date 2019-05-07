@@ -36,3 +36,4 @@ green_box_nucleo\dht11.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_
 green_box_nucleo\dht11.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 green_box_nucleo\dht11.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 green_box_nucleo\dht11.o: dht11.h
+green_box_nucleo\dht11.o: main_injection.h

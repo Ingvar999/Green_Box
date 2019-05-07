@@ -41,5 +41,4 @@ green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
-green_box_nucleo\main_injection.o: dht11.h
-green_box_nucleo\main_injection.o: dwt_stm32_delay.h
+green_box_nucleo\main_injection.o: hw_layer.h

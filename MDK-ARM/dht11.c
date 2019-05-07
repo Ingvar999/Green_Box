@@ -1,5 +1,6 @@
 #include "dwt_stm32_delay.h"
 #include "dht11.h"
+#include "main_injection.h"
 
 struct _TH dht11Data;
 
@@ -52,6 +53,7 @@ DHT_STATUS UpdateDht11(void){
 	HAL_Delay(30);
 	HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_SET);
 	GetDhtGetUs(GPIO_PIN_SET, TIMEOUT);
+	
 	if (GetDhtGetUs(GPIO_PIN_RESET, TIMEOUT) == -1 || GetDhtGetUs(GPIO_PIN_SET, TIMEOUT) == -1){
 		return DHT_NOT_RESPONDING;
 	}
