@@ -336,7 +336,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;          ../Drivers/STM32F7xx_HAL_Driver/Inc;          ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;          ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;          ../Drivers/CMSIS/Include;          ../MDK-ARM</IncludePath>
+              <IncludePath>../Inc;            ../Drivers/STM32F7xx_HAL_Driver/Inc;            ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;            ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;            ../Drivers/CMSIS/Include;            ../MDK-ARM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -574,6 +574,36 @@
               <FileName>hw_layer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\hw_layer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TaskManager</GroupName>
+          <Files>
+            <File>
+              <FileName>task_manager.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\task_manager.h</FilePath>
+            </File>
+            <File>
+              <FileName>task_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\task_manager.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Serial</GroupName>
+          <Files>
+            <File>
+              <FileName>serial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\serial.h</FilePath>
+            </File>
+            <File>
+              <FileName>serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\serial.c</FilePath>
             </File>
           </Files>
         </Group>

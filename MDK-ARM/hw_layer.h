@@ -3,10 +3,10 @@
 
 extern ADC_HandleTypeDef hadc1;
 
+#define COIL &TIM3->CCR1
 #define PUMP &TIM3->CCR2
 #define AIR_BLOWER &TIM4->CCR3
 #define LEDS &TIM4->CCR4
-#define COIL &TIM13->CCR1
 
 #define DHT_GPIO GPIOA
 #define DHT_PIN GPIO_PIN_5

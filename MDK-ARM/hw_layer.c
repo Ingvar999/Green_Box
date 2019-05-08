@@ -13,7 +13,7 @@ static unsigned ReadAnalog(unsigned channel){
 	
 	sConfig.Channel = channel;
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES;
   HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 	
 	HAL_ADC_Start(&hadc1);
