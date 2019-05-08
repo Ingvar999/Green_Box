@@ -42,3 +42,6 @@ green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 green_box_nucleo\main_injection.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 green_box_nucleo\main_injection.o: hw_layer.h
+green_box_nucleo\main_injection.o: serial.h
+green_box_nucleo\main_injection.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+green_box_nucleo\main_injection.o: task_manager.h

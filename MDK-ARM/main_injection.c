@@ -4,17 +4,13 @@
 
 #include "main_injection.h"
 #include "hw_layer.h"
+#include "serial.h"
+#include "task_manager.h"
 
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 
 extern UART_HandleTypeDef huart3;
-
-const int bufSize = 50;
-static uint8_t txbuf[bufSize] = {0};
-static uint8_t rxbuf[bufSize] = {0};
-static uint8_t ch;
-static int pos = 0;
 
 void HandleHostString(UART_HandleTypeDef *huart, const char *data){
 	int val = atoi(data + 1);
@@ -32,28 +28,8 @@ void HandleHostString(UART_HandleTypeDef *huart, const char *data){
 			SetControlState(COIL, val);
 		break;
 		default:
-			HAL_UART_Transmit_IT(&huart3, txbuf, sprintf((char *)txbuf, "ok\n"));
+			PrintSerial(huart, "ok\n");
 		break;
-	}
-}
-
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-	if (huart == &huart3){
-		if (ch == '\n'){
-			rxbuf[pos] = 0;
-			HandleHostString(huart, (char *)rxbuf);
-			pos = 0;
-		}	
-		else{
-			if (pos < bufSize){
-				rxbuf[pos++] = ch;
-			}
-			else{
-				// buffer overflow
-			}
-		}	
-		HAL_UART_Receive_IT(huart, &ch, 1);
 	}
 }
 
@@ -76,14 +52,14 @@ void Init_Peripheral(){
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
 	
-	HAL_UART_Receive_IT(&huart3, &ch, 1);
-	
 	Init_hw();
+	
+	BeginSerialStringHandling(&huart3, '\n', HandleHostString);
 }
 
 void Loop(){
 	HAL_Delay(1700);
-	HAL_UART_Transmit_IT(&huart3, txbuf, sprintf((char *)txbuf, "%d %d %d %d %d\n", GetHumidity(), GetTemperature(),
-		GetLightSaturation(), GetSoilMoisture(), GetPowerConsumption()));
+	PrintSerial(&huart3, "%d %d %d %d %d\n", GetHumidity(), GetTemperature(),
+		GetLightSaturation(), GetSoilMoisture(), GetPowerConsumption());
 }
 	
