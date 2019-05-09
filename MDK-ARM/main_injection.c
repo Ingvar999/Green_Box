@@ -12,24 +12,47 @@ extern TIM_HandleTypeDef htim4;
 
 extern UART_HandleTypeDef huart3;
 
+typedef struct {
+	volatile unsigned *control;
+	unsigned value;
+} TControl, *pTControl;
+
+void SetControlValue(void *context){
+	pTControl control = (pTControl)context;
+	SetControlState(control->control, control->value);
+	free(control);
+}
+
+void CyclePrintInfo(void *context){
+	PrintSerial(&huart3, "%d %d %d %d %d\n", GetHumidity(), GetTemperature(),
+		GetLightSaturation(), GetSoilMoisture(), GetPowerConsumption());
+	AddTask(CyclePrintInfo, 0, 1700);
+}
+
 void HandleHostString(UART_HandleTypeDef *huart, const char *data){
-	int val = atoi(data + 1);
+	volatile unsigned *control = 0;
 	switch (data[0]){
 		case 'p':
-			SetControlState(PUMP, val);
+			control = PUMP;
 		break;
 		case 'l':
-			SetControlState(LEDS, val);
+			control = LEDS;
 		break;
 		case 'a':
-			SetControlState(AIR_BLOWER, val);
+			control = AIR_BLOWER;
 		break;
 		case 'c':
-			SetControlState(COIL, val);
+			control = COIL;
 		break;
 		default:
 			PrintSerial(huart, "ok\n");
 		break;
+	}
+	if (control != 0){
+		pTControl context = malloc(sizeof(TControl));
+		context->control = control;
+		context->value = atoi(data + 1);
+		AddTask(SetControlValue, context, 0);
 	}
 }
 
@@ -55,11 +78,10 @@ void Init_Peripheral(){
 	Init_hw();
 	
 	BeginSerialStringHandling(&huart3, '\n', HandleHostString);
+	AddTask(CyclePrintInfo, 0, 1700);
 }
 
 void Loop(){
-	HAL_Delay(1700);
-	PrintSerial(&huart3, "%d %d %d %d %d\n", GetHumidity(), GetTemperature(),
-		GetLightSaturation(), GetSoilMoisture(), GetPowerConsumption());
+	DispatchTasks();
 }
 	
